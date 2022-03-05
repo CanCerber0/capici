@@ -131,25 +131,25 @@
    * Porfolio isotope and filter
    */
   window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item'
+    let ebookContainer = select('.ebook-container');
+    if (ebookContainer) {
+      let ebookIsotope = new Isotope(ebookContainer, {
+        itemSelector: '.ebook-item'
       });
 
-      let portfolioFilters = select('#portfolio-flters li', true);
+      let ebookFilters = select('#ebook-flters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
+      on('click', '#ebook-flters li', function(e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
+        ebookFilters.forEach(function(el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
 
-        portfolioIsotope.arrange({
+        ebookIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
-        portfolioIsotope.on('arrangeComplete', function() {
+        ebookIsotope.on('arrangeComplete', function() {
           AOS.refresh()
         });
       }, true);
@@ -158,16 +158,23 @@
   });
 
   /**
-   * Initiate portfolio lightbox 
+   * Initiate ebook lightbox 
    */
-  const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
+  const ebookLightbox = GLightbox({
+    selector: '.ebook-lightbox'
+  });
+  
+  /**
+   * Initiate courses lightbox 
+   */
+   const coursesLightbox = GLightbox({
+    selector: '.courses-lightbox'
   });
 
   /**
-   * Portfolio details slider
+   * ebook details slider
    */
-  new Swiper('.portfolio-details-slider', {
+  new Swiper('.ebook-details-slider', {
     speed: 400,
     loop: true,
     autoplay: {
