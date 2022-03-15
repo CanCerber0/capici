@@ -184,6 +184,31 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
 }
 
+@media (min-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+  
+  .nav-menu{
+    padding: 0;
+  }
+  .profile{
+    display: flex;
+    align-items: center;
+  }
+  .social-links{
+    display: none;
+  }
+
+  #header .profile h1{
+    font-size: 24px;
+    margin-left: 10px;
+  }
+  .progress-bar-wrap{
+    display: none;
+  }
+}
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -210,7 +235,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #hero h1 {
   margin: 0 0 10px 0;
-  font-size: 64px;
+  font-size: 84px;
   font-weight: 700;
   line-height: 56px;
   color: #fff;
@@ -218,7 +243,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero p {
   color: #fff;
   margin-bottom: 50px;
-  font-size: 26px;
+  font-size: 56px;
   font-family: "Poppins", sans-serif;
 }
 #hero p span {
@@ -241,6 +266,12 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
+  }
+  #hero p {
+    color: #fff;
+    margin-bottom: 50px;
+    font-size: 24px;
+    font-family: "Poppins", sans-serif;
   }
 }
 
@@ -442,7 +473,21 @@ section {
   background: #fff;
   border: 2px solid #1f5297;
 }
+.video--player{
+  width: 280px;
+  height: 475px;
+  justify-content: center;
+}
+.first--course{
+  width: 150%;
+}
 
+@media (max-width: 768px){
+  .video--player{
+    width: 225px;
+    height: 400px
+  }
+}
 /*--------------------------------------------------------------
 # ebook
 --------------------------------------------------------------*/
