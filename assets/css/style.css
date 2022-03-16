@@ -279,7 +279,7 @@ h1, h2, h3, h4, h5, h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 10px 0;
   overflow: hidden;
 }
 
@@ -670,14 +670,19 @@ section {
 }
 .services .title a {
   color: #343a40;
+  text-transform: uppercase;
 }
 .services .title a:hover {
   color: #149ddd;
 }
+
 .services .description {
   margin-left: 80px;
   line-height: 24px;
   font-size: 14px;
+}
+.download{
+  height: 125px;
 }
 
 /*--------------------------------------------------------------
